@@ -1,4 +1,4 @@
-#pragma once  // templateは一度しか読み込まれないようにする
+#pragma once // templateは一度だけ
 
 #include<bits/stdc++.h>
 using namespace std;
