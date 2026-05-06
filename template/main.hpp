@@ -1,3 +1,5 @@
+#pragma once  // templateは一度しか読み込まれないようにする
+
 #include<bits/stdc++.h>
 using namespace std;
 using ll = long long;
