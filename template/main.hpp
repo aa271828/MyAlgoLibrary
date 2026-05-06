@@ -32,7 +32,8 @@ struct FastIO {
       std::ios::sync_with_stdio(false);
       std::cin.tie(nullptr);
    }
-} fastio;
+};
+inline FastIO fastio;
 //あまり(負の数対応)
 template<typename T>
 T ovr(T a,T b){
@@ -67,9 +68,6 @@ void in2(vector<T> &A, vector<S> &B) {
       cin >> A[i] >> B[i];
    }
 }
-vi dx = {-1,0,1,0};
-vi dy = {0,1,0,-1};
+const vi dx = {-1,0,1,0};
+const vi dy = {0,1,0,-1};
 
-/////////main///////
-int main() {
-}
