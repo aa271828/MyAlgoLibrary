@@ -1,9 +1,9 @@
 #include "../template/main.hpp"
 //トポロジカルソート topological sort
-vector<ll> TS(vvl g)
+vector<ll> TS(vvc<ll> g)
 {
     ll n = g.size() ;
-    set<pll>st;//入次数、id
+    set<pl>st;//入次数、id
     vector<ll> ee(n , 0) ;
     rep(i,0,n){
         for(ll x : g[i]){

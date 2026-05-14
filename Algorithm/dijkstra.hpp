@@ -1,9 +1,9 @@
 #pragma once
 #include "../template/main.hpp"
 // {cost, to}
-vl dijkstra(ll n, vvp g) {
+vl dijkstra(ll n, vvc<pl> g) {
   vl dp(n,INF);
-  set<pll> st;
+  set<pl> st;
   rep(i,0,n)st.insert(make_pair(INF,i));
   auto upd_sc=[&](ll i,ll x)->ll{
     if(dp[i] <= x || st.find(make_pair(dp[i],i)) == st.end()){
@@ -17,10 +17,10 @@ vl dijkstra(ll n, vvp g) {
   upd_sc(0,0);
   rep(i,0,n){ //?n-1かも?
     auto beg = st.begin();
-    pll begp = (*beg);
+    pl begp = (*beg);
     st.erase(*beg);
     //begから伸びるもの
-    for(pll x : g[begp.second]){
+    for(pl x : g[begp.second]){
       upd_sc(x.second,dp[begp.second] + x.first);
     }
   }

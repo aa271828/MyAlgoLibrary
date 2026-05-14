@@ -10,7 +10,7 @@ template<
     F (*composition)(F, F),
     F (*id)()
 >
-struct segtree {
+struct lazysegtree {
 
    ll N=1ll<<32;
    ll H=32;
@@ -31,7 +31,7 @@ struct segtree {
       D.push_back(Node());
       return D.size() - 1;
    }
-   segtree() {
+   lazysegtree() {
       D.reserve(4000000);
       new_node();
    }
