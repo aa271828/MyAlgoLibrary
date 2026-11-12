@@ -1,5 +1,4 @@
 #pragma once
-#include "../template/main.hpp"
 struct RANGE{
     set<pair<ll,ll>> a;
     ll add(ll l , ll r){

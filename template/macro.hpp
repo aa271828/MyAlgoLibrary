@@ -8,6 +8,11 @@ using u64 = unsigned long long;
 using i128 = __int128;
 using pl = pair<ll, ll>;
 using vl = vector<ll>;
+using vvl = vector<vl>;
+using tlll = tuple<ll,ll,ll>;
+using tllll = tuple<ll,ll,ll,ll>;
+using vp = vector<pl>;
+using vvp = vector<vp>;
 template <class T>
 using vc = vector<T>;
 template <class T>
@@ -31,8 +36,14 @@ using vvvvvc = vector<vvvvc<T>>;
 
 const ll INF = 2e18 ;
 const ll MOD = 998244353;
-#define rep(i,a,b) for(ll i=(ll)a; i<(ll)b; i++)
-#define rrep(i,a,b) for(ll i=(ll)b-1; i>=(ll)a; i--)
+#define rep1(i,a) for(ll i=(ll)0; i<(ll)a; i++)
+#define rep2(i,a,b) for(ll i=(ll)a; i<(ll)b; i++)
+#define rrep1(i,a) for(ll i=(ll)b-1; i>=(ll)0; i--)
+#define rrep2(i,a,b) for(ll i=(ll)b-1; i>=(ll)a; i--)
+#define REP(_1, _2, _3, NAME, ...) NAME
+#define rep(...) REP(__VA_ARGS__, rep2, rep1)(__VA_ARGS__)
+#define RREP(_1, _2, _3, NAME, ...) NAME
+#define rrep(...) RREP(__VA_ARGS__, rrep2, rrep2)(__VA_ARGS__)
 #define all(vec1) (vec1).begin(), (vec1).end()
 #define rall(vec1) (vec1).rbegin(), (vec1).rend()
 #define len(x) ll(x.size())
